@@ -22,6 +22,8 @@ class ST_Shortcode_Shipment_Tracking
 
     public static function output($atts)
     {
+
+
         include_once ST_ABSPATH . 'templates/order/form-tracking.php';
     }
 }
