@@ -34,7 +34,15 @@ final class ShipmentTracker
     private function includes()
     {
         include_once ST_ABSPATH . 'includes/class-st-shortcodes.php';
-        include_once ST_ABSPATH . 'includes/shortcodes/class-st-shortcodes-shipment-tracking.php';
+        include_once ST_ABSPATH . 'includes/shortcodes/class-st-shortcodes-shipment-tracker.php';
+
+        if ($this->is_request('admin')) {
+            include_once ST_ABSPATH . 'includes/admin/class-st-admin.php';
+        }
+
+        if ($this->is_request('frontend')) {
+            include_once ST_ABSPATH . 'includes/class-st-front-scripts.php';
+        }
 
     }
 
@@ -49,6 +57,20 @@ final class ShipmentTracker
     {
         if (!defined($path)) {
             return define($path, $value);
+        }
+    }
+
+    private function is_request($type)
+    {
+        switch ($type) {
+            case 'admin':
+                return is_admin();
+            case 'ajax':
+                return defined('DOING_AJAX');
+            case 'cron':
+                return defined('DOING_CRON');
+            case 'frontend':
+                return (!is_admin() || defined('DOING_AJAX')) && !defined('DOING_CRON');
         }
     }
 

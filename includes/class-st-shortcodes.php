@@ -14,7 +14,7 @@ class ST_Shortcodes
     public static function init()
     {
         $shortcodes = array(
-            'st_shipment_tracking' => __CLASS__ . '::shipment_tracking'
+            'st_shipment_tracker' => __CLASS__ . '::shipment_tracker'
         );
 
         foreach ($shortcodes as $shortcode => $function) {
@@ -33,11 +33,11 @@ class ST_Shortcodes
         return ob_get_clean();
     }
 
-    public static function shipment_tracking($atts)
+    public static function shipment_tracker($atts)
     {
         return self::shortcode_wrapper(
             array(
-                'ST_Shortcode_Shipment_Tracking',
+                'ST_Shortcode_Shipment_Tracker',
                 'output'
             ),
             $atts
