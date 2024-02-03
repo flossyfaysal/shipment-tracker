@@ -29,8 +29,8 @@ class ST_Frontend_Scripts
         $version = '1.0.0';
 
         $styles = array(
-            'st-general' => array(
-                'src' => self::get_asset_url('assets/css/st-general.css'),
+            'st-root' => array(
+                'src' => self::get_asset_url('assets/css/st-root.css'),
                 'deps' => '',
                 'version' => $version,
                 'media' => 'all',

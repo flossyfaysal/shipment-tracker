@@ -167,3 +167,30 @@
     border-color: #fff;
   }
 }
+
+.shipment-tracker {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+.shipment-tracker-header {
+  margin-bottom: 20px;
+}
+.shipment-tracker input[type="text"] {
+  padding: 10px 20px;
+  line-height: 1.7;
+  border: 3px solid #28303d;
+}
+.shipment-tracker button {
+  background: var(--st-btn-bg) !important;
+  padding: var(--st-btn-padding-v) var(--st-btn-padding-h) !important;
+  font-size: var(--st-btn-font-sz) !important;
+  line-height: 1.3 !important;
+  color: var(--st-btn-clr) !important;
+}
+.shipment-tracker button:hover {
+  background: var(--st-btn-clr) !important;
+  color: var(--st-btn-bg) !important;
+  border-color: currentColor !important;
+}

@@ -1,0 +1,12 @@
+:root {
+  --st-border-rad: 5px;
+  --st-border: 3px solid var(var(--st-btn-bg));
+  --st-margin-b: 10px;
+  --st-margin-t: 10px;
+  --st-btn-bg: #28303d;
+  --st-btn-clr: #ffffff;
+  --st-btn-lh: 1.3;
+  --st-btn-padding-v: 15px;
+  --st-btn-padding-h: calc(2 * var(--st-btn-padding-v));
+  --st-btn-font-sz: 1.25rem !important;
+}
