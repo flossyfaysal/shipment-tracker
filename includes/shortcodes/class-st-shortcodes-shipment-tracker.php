@@ -27,6 +27,8 @@ class ST_Shortcode_Shipment_Tracker
             return;
         }
 
+        include_once ST_ABSPATH . 'templates/order/form-tracker.php';
+
         $atts = shortcode_atts(array(), $atts, 'st_shipment_tracker');
         $nonce_value = wc_get_var($_REQUEST['shipment-tracker-nonce'], wc_get_var($_REQUEST['_wpnonce']));
 
@@ -44,9 +46,6 @@ class ST_Shortcode_Shipment_Tracker
                     wc_print_notice(__('Sorry, the shipment could not be found. Please contact us if you are having difficulty finding your order details.', 'shipment-tracker'), 'error');
                 }
             }
-
         }
-
-        include_once ST_ABSPATH . 'templates/order/form-tracker.php';
     }
 }

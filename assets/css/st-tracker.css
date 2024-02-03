@@ -192,5 +192,4 @@
 .shipment-tracker button:hover {
   background: var(--st-btn-clr) !important;
   color: var(--st-btn-bg) !important;
-  border-color: currentColor !important;
 }

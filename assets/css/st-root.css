@@ -9,4 +9,34 @@
   --st-btn-padding-v: 15px;
   --st-btn-padding-h: calc(2 * var(--st-btn-padding-v));
   --st-btn-font-sz: 1.25rem !important;
+  --st-flex: flex;
+  --st-jst-con-sb: space-between;
+  --st-max-width: 800px;
+
+  /***
+  * Spacing Vars
+  */
+  --st-mb-sm: 1rem;
+  --st-mb-md: 1.5rem;
+  --st-mb-lg: 2rem;
+}
+
+.display-flex {
+  display: var(--st-flex);
+}
+.justify-content-sp-bt {
+  justify-content: var(--st-jst-con-sb);
+}
+
+.mb-md {
+  margin-bottom: var(--st-mb-md);
+}
+.mb-lg {
+  margin-bottom: var(--st-mb-lg);
+}
+.mb-sm {
+  margin-bottom: var(--st-mb-sm);
+}
+.max-width {
+  max-width: var(--st-max-width);
 }

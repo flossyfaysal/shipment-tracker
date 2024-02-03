@@ -7,16 +7,29 @@ $notes = $order->get_customer_order_notes();
 ?>
 
 <div class="st-package-information">
-    <div class="stp-header">
-        <h3> Package Information </h3>
+    <div class="stp-header display-flex justify-content-sp-bt mb-sm">
+        <h3>
+            <?php esc_html_e('Package Information', 'shipment-tracker'); ?>
+        </h3>
         <div class="stp-tracking-number">
-            <p>Tracking Number</p>
+            <p>
+                <?php esc_html_e('Tracking Number', 'shipment-tracker'); ?>
+            </p>
             <span>ECR140962762901243</span>
         </div>
     </div>
     <div class="stp-body">
-        <div class="stp-order-details">
-            Order Details
+        <div class="stp-order-details display-flex justify-content-sp-bt">
+            <div class="stp-order-creation">
+                <p>Order Creation</p>
+                <span>January 29 2024</span>
+            </div>
+            <div class="stp-order-elapsed">
+                <span>10 Hours</span>
+            </div>
+            <div class="stp-delivery-type">
+                <span>Standard</span>
+            </div>
         </div>
         <div class="stp-company-details">
             Company Details
@@ -146,5 +159,7 @@ $notes = $order->get_customer_order_notes();
             </div>
         </div>
     </div>
-
+    <div class="stp-footer">
+        <p>@copyright Upsidedown Technologies</p>
+    </div>
 </div>
