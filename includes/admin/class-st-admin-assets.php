@@ -22,6 +22,10 @@ class ST_Admin_Assets
     public function admin_styles()
     {
     }
+
+    public function admin_scripts()
+    {
+    }
 }
 
 return new ST_Admin_Assets();
