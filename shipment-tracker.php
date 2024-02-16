@@ -32,12 +32,12 @@ if (!class_exists('ShipmentTracker')) {
     include_once dirname(ST_PLUGIN_FILE) . '/includes/class-shipment-tracker.php';
 }
 
-function SOT()
+function ST()
 {
     return ShipmentTracker::instance();
 }
 
-$GLOBALS['simpleordertracker'] = SOT();
+$GLOBALS['shipmenttracker'] = ST();
 
 
 

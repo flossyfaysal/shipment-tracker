@@ -74,4 +74,8 @@ final class ShipmentTracker
         }
     }
 
+    public function plugin_url()
+    {
+        return untrailingslashit(plugins_url('/', ST_PLUGIN_FILE));
+    }
 }

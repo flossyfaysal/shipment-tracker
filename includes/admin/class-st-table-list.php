@@ -56,12 +56,6 @@ class ST_Admin_Table_List extends WP_List_Table
     {
         $url = admin_url('admin.php?page=wc-settings&tab=advanced&section=keys&edit-key');
     }
-
-
-
-
-
-
 }
 
 return new ST_Admin_Table_List();
