@@ -198,7 +198,40 @@ if (!class_exists('ST_Admin_Settings')) {
                             do_action('st_settings_' . sanitize_title($value['id']));
                         }
                         break;
+                    case 'info':
+                        ?>
+                        <tr valign="top" <?php echo $value['row_class'] ? 'class="' . esc_attr($value['row_class']) . '"' : '' ?>">
+                            <th scope="row" class="titledesc" />
+                            <td style="<?php echo esc_attr($value['css']); ?>">
+                                <?php echo wp_kses_post(wpautop(wp_texturize($value['text'])));
+                                echo '</td></tr>'; ?>
+                                <?php
+                                break;
+                    case 'sectionend':
+                        if (!empty($value['id'])) {
+                            do_action('st_settings_' . sanitize_title($value['id']) . '_end');
+                        }
+                        echo '</table>';
+                        if (!empty($value['id'])) {
+                            do_action('st_settings_' . sanitize_title($value['id']) . 'after_');
+                        }
+                        break;
+                    case 'color':
+                        $option_value = $value['value'];
+                        ?>
+                        <tr valign="top" <?php echo $value['row_class'] ? ' class="' . esc_attr($value['row_class']) . '"' : '' ?>">
+                            <th scope="row" class="titledesc">
+                                <label for="<?php echo esc_attr($value['id']); ?>">
+                                    <?php echo esc_html($value['title']); ?>
+                                    <?php echo $tooltip_html; ?>
+                                </label>
+                            </th>
+                            <td>
+                            </td>
+                        </tr>
+                    <?php
                 }
+
             }
         }
     }
