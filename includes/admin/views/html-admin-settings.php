@@ -14,10 +14,10 @@ $tabs_exists = isset($tabs[$current_tab]) || has_action('st_sections_' . $curren
 st_settings_' . $current_tab) || has_action('st_settings_tab_' . $current_tab);
 $current_tab_label = isset($tabs[$current_tab]) ? $tabs[$current_tab] : '';
 
-if (!$tab_exists) {
-    wp_safe_redirect(admin_url('admin.php?page=st-settings'));
-    exit;
-}
+// if (!$tab_exists) {
+//     wp_safe_redirect(admin_url('admin.php?page=st-settings'));
+//     exit;
+// }
 ?>
 
 <div class="wrap shiptment-tracker">

@@ -69,8 +69,8 @@ if (!class_exists('ST_Admin_Settings')) {
                 foreach (self::$errors as $error) {
                     echo '<div id="message" class="error inline"><p><strong>' . esc_html($error) . '</strong></p></div>';
                 }
-            } elseif (count(sefl::$messages) > 0) {
-                foreach (sefl::$messages as $message) {
+            } elseif (count(self::$messages) > 0) {
+                foreach (self::$messages as $message) {
                     echo '<div id="message" class="updated inline"><p><strong>' . esc_html($message) . '</strong></p></div>';
                 }
             }
@@ -82,7 +82,7 @@ if (!class_exists('ST_Admin_Settings')) {
 
             do_action('st_settings_start');
 
-            wp_enqueue_script('st_settings', ST()->plugin_url() . '/assets/js/admin/settings.js', array('jquery', 'wp-util', 'jquery-ui-datepicker', 'jquery-ui-sortable', 'iris', 'selectWoo'), ST()->version, true);
+            wp_enqueue_script('st_settings', ST()->plugin_url() . '/assets/js/admin/settings.js', array('jquery', 'wp-util', 'jquery-ui-datepicker', 'jquery-ui-sortable', 'iris', 'selectWoo'), '1.0.0', true);
 
             wp_localize_script(
                 'st_settings',
@@ -233,6 +233,11 @@ if (!class_exists('ST_Admin_Settings')) {
                 }
 
             }
+        }
+
+        public static function save_fields($settings)
+        {
+
         }
     }
 }

@@ -24,6 +24,7 @@ class ST_Admin
         include_once __DIR__ . '/class-st-admin-assets.php';
         include_once __DIR__ . '/class-st-table-list.php';
         include_once __DIR__ . '/class-st-admin-menu.php';
+        include_once __DIR__ . '/class-st-admin-settings.php';
     }
 }
 

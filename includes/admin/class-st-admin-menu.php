@@ -30,18 +30,11 @@ class ST_Admin_Menus
     public function settings_menu()
     {
         $settings_page = add_submenu_page('shipment-tracker', __('ST Settings', 'shipment-tracker'), __('Settings', 'shipment-tracker'), 'manage_woocommerce', 'st-settings', array($this, 'settings_page'));
-
-        add_action('load-' . $settings_page, array($this, 'settings_page_init'));
     }
 
     public function settings_page()
     {
-        echo 'true';
-    }
-
-    public function settings_page_init()
-    {
-
+        ST_Admin_Settings::output();
     }
 }
 
